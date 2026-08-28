@@ -202,6 +202,9 @@ footer .quicklinks a:hover { color: var(--aqua) !important; }
 .portfolio-hover { background: rgba(28, 157, 179, 0.92) !important; }
 .portfolio-hover-content { color: #fff !important; }
 
+/* ---- Text selection highlight (was the old gold) ---- */
+::selection { background: #2fc4d6; color: #0b1f33; }
+
 /* ---- A few pages hardcode literal legacy colors inline; catch those too ---- */
 [style*="096d81"] { background: var(--navy) !important; }
 [style*="254, 209, 54"], [style*="254,209,54"] { background: var(--aqua) !important; color: #fff !important; }
