@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="smTitle">
+  <title id="smTitle">Illustration of a phone showing a social media feed, surrounded by like, comment, and share icons</title>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dcf1f4"/>
+      <stop offset="100%" stop-color="#bfe6ec"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2542"/>
+      <stop offset="100%" stop-color="#0a1930"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#bgGrad)"/>
+
+  <!-- faint ripple rings, ties back to the lake motif -->
+  <g fill="none" stroke="#1c9db3" stroke-width="1.5" opacity="0.35">
+    <circle cx="150" cy="500" r="40"/>
+    <circle cx="150" cy="500" r="70"/>
+    <circle cx="150" cy="500" r="100"/>
+  </g>
+  <g fill="none" stroke="#1c9db3" stroke-width="1.5" opacity="0.25">
+    <circle cx="670" cy="120" r="30"/>
+    <circle cx="670" cy="120" r="54"/>
+  </g>
+
+  <!-- floating share icon (top left) -->
+  <g transform="translate(120,110)">
+    <circle cx="0" cy="0" r="42" fill="#ffffff"/>
+    <g stroke="#1c9db3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="-13" cy="0" r="7" fill="#1c9db3" stroke="none"/>
+      <circle cx="12" cy="-16" r="7" fill="#2fc4d6" stroke="none"/>
+      <circle cx="12" cy="16" r="7" fill="#2fc4d6" stroke="none"/>
+      <path d="M -8,-4 L 7,-13"/>
+      <path d="M -8,4 L 7,13"/>
+    </g>
+  </g>
+
+  <!-- floating heart icon (top right) -->
+  <g transform="translate(660,210)">
+    <circle cx="0" cy="0" r="46" fill="#ffffff"/>
+    <path d="M0,17 C-22,0 -30,-18 -16,-28 C-6,-35 0,-24 0,-18 C0,-24 6,-35 16,-28 C30,-18 22,0 0,17 Z" fill="#2fc4d6"/>
+  </g>
+
+  <!-- floating comment bubble (bottom right) -->
+  <g transform="translate(690,470)">
+    <circle cx="0" cy="0" r="44" fill="#ffffff"/>
+    <path d="M-20,-10 h40 a6,6 0 0 1 6,6 v18 a6,6 0 0 1 -6,6 h-24 l-12,12 v-12 h-4 a6,6 0 0 1 -6,-6 v-18 a6,6 0 0 1 6,-6 Z" fill="#0f2542"/>
+    <circle cx="-8" cy="4" r="2.6" fill="#dcf1f4"/>
+    <circle cx="0" cy="4" r="2.6" fill="#dcf1f4"/>
+    <circle cx="8" cy="4" r="2.6" fill="#dcf1f4"/>
+  </g>
+
+  <!-- floating hashtag (bottom left) -->
+  <g transform="translate(110,560)" stroke="#0a1930" stroke-width="7" stroke-linecap="round">
+    <line x1="-14" y1="-16" x2="-20" y2="16"/>
+    <line x1="4" y1="-16" x2="-2" y2="16"/>
+    <line x1="-22" y1="-6" x2="10" y2="-6"/>
+    <line x1="-24" y1="6" x2="8" y2="6"/>
+  </g>
+
+  <!-- phone -->
+  <g transform="translate(400,330)">
+    <rect x="-118" y="-235" width="236" height="470" rx="34" fill="url(#phoneGrad)"/>
+    <rect x="-102" y="-215" width="204" height="430" rx="18" fill="#eef6f7"/>
+    <rect x="-24" y="-227" width="48" height="8" rx="4" fill="#0a1930" opacity="0.5"/>
+
+    <!-- post card 1 -->
+    <g transform="translate(-88,-196)">
+      <rect width="176" height="112" rx="14" fill="#ffffff" stroke="#d6e5e9"/>
+      <circle cx="22" cy="24" r="12" fill="#2fc4d6"/>
+      <rect x="42" y="16" width="70" height="7" rx="3.5" fill="#0b1f33" opacity="0.75"/>
+      <rect x="42" y="29" width="46" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="14" y="48" width="148" height="40" rx="8" fill="#dcf1f4"/>
+      <g transform="translate(20,96)" stroke="#4c6474" stroke-width="3" stroke-linecap="round" fill="none">
+        <path d="M0,6 C-6,0 -8,-5 -3,-8 C0,-10 2,-6 2,-4 C2,-6 4,-10 7,-8 C12,-5 10,0 4,6 Z" fill="#1c9db3" stroke="none"/>
+      </g>
+      <rect x="40" y="93" width="24" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="80" y="93" width="24" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="120" y="93" width="24" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+    </g>
+
+    <!-- post card 2 -->
+    <g transform="translate(-88,-72)">
+      <rect width="176" height="96" rx="14" fill="#ffffff" stroke="#d6e5e9"/>
+      <circle cx="22" cy="24" r="12" fill="#0a1930"/>
+      <rect x="42" y="16" width="60" height="7" rx="3.5" fill="#0b1f33" opacity="0.75"/>
+      <rect x="42" y="29" width="38" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="14" y="48" width="70" height="34" rx="8" fill="#bfe6ec"/>
+      <rect x="90" y="48" width="72" height="34" rx="8" fill="#dcf1f4"/>
+    </g>
+
+    <!-- post card 3 -->
+    <g transform="translate(-88,36)">
+      <rect width="176" height="112" rx="14" fill="#ffffff" stroke="#d6e5e9"/>
+      <circle cx="22" cy="24" r="12" fill="#1c9db3"/>
+      <rect x="42" y="16" width="80" height="7" rx="3.5" fill="#0b1f33" opacity="0.75"/>
+      <rect x="42" y="29" width="50" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="14" y="48" width="148" height="40" rx="8" fill="#0f2542"/>
+      <path d="M60,68 l14,14 26,-30" fill="none" stroke="#2fc4d6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="40" y="93" width="24" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+      <rect x="80" y="93" width="24" height="6" rx="3" fill="#4c6474" opacity="0.55"/>
+    </g>
+  </g>
+</svg>

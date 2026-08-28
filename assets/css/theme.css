@@ -191,6 +191,17 @@ footer .social-buttons a:hover { color: var(--aqua) !important; border-color: va
 footer .quicklinks a { color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; letter-spacing: 0.04em; }
 footer .quicklinks a:hover { color: var(--aqua) !important; }
 
+/* ---- Bootstrap ships a second, hardcoded "#fed136 !important" rule for
+   .text-primary later in the same stylesheet, which beats the variable-based
+   rule above. Override it directly so icons that rely on .text-primary
+   (service icon circles, etc.) pick up the new palette. ---- */
+.text-primary { color: var(--aqua) !important; }
+
+/* ---- Portfolio hover overlay: also a hardcoded rgba(254,209,54,.9) in
+   Bootstrap, not variable-driven. ---- */
+.portfolio-hover { background: rgba(28, 157, 179, 0.92) !important; }
+.portfolio-hover-content { color: #fff !important; }
+
 /* ---- A few pages hardcode literal legacy colors inline; catch those too ---- */
 [style*="096d81"] { background: var(--navy) !important; }
 [style*="254, 209, 54"], [style*="254,209,54"] { background: var(--aqua) !important; color: #fff !important; }
