@@ -120,8 +120,26 @@ a:hover, a:focus { color: var(--navy-2); }
 #mainNav .dropdown-item:hover { color: var(--aqua-bright) !important; }
 #mainNav.navbar-shrink .nav-link:hover,
 #mainNav.navbar-shrink .dropdown-toggle:hover { color: var(--aqua) !important; }
-#mainNav .navbar-toggler { color: #fff !important; border-color: rgba(255, 255, 255, 0.4) !important; }
-#mainNav.navbar-shrink .navbar-toggler { color: var(--ink) !important; border-color: var(--line) !important; }
+#mainNav .navbar-toggler { color: #fff !important; background-color: transparent !important; border-color: rgba(255, 255, 255, 0.4) !important; }
+#mainNav.navbar-shrink .navbar-toggler { color: var(--ink) !important; background-color: transparent !important; border-color: var(--line) !important; }
+
+/* ---- Mobile menu: the expanded .navbar-collapse had no background of its
+   own, so page content showed through behind the open menu items. ---- */
+@media (max-width: 991.98px) {
+  #mainNav #navbarResponsive.show,
+  #mainNav #navbarResponsive.collapsing {
+    background: var(--navy);
+    padding: 14px 18px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  #mainNav.navbar-shrink #navbarResponsive.show,
+  #mainNav.navbar-shrink #navbarResponsive.collapsing {
+    background: #ffffff;
+    box-shadow: 0 16px 34px -18px rgba(10, 25, 48, 0.35);
+  }
+  #mainNav .navbar-nav .nav-item { padding: 4px 0; }
+}
 
 .dropdown-menu {
   background: #ffffff !important;
@@ -201,6 +219,26 @@ footer .quicklinks a:hover { color: var(--aqua) !important; }
    Bootstrap, not variable-driven. ---- */
 .portfolio-hover { background: rgba(28, 157, 179, 0.92) !important; }
 .portfolio-hover-content { color: #fff !important; }
+
+/* ---- Uniform portfolio card sizing (image + caption match across cards,
+   regardless of each source image's original aspect ratio) ---- */
+.portfolio-item { display: flex; flex-direction: column; }
+.portfolio-item .portfolio-link { display: block; width: 100%; max-width: 400px; margin: 0 auto; }
+.portfolio-item .portfolio-link img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.portfolio-item .portfolio-caption {
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+}
 
 /* ---- Text selection highlight (was the old gold) ---- */
 ::selection { background: #2fc4d6; color: #0b1f33; }
