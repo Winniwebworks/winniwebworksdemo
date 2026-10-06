@@ -41,10 +41,27 @@
   "image": "https://winniwebworks.com/assets/og/preview.jpg",
   "description": "Affordable web design, SEO, website repair, landing pages and online support for small businesses throughout New Hampshire.",
   "areaServed": ["New Hampshire", "Laconia NH", "Meredith NH", "Gilford NH", "Plymouth NH"],
-  "address": { "@type": "PostalAddress", "addressRegion": "NH", "addressCountry": "US" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Meredith", "addressRegion": "NH", "addressCountry": "US" },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61588019742144",
     "https://www.linkedin.com/in/sara-huntley/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How much does a small business website cost?", "acceptedAnswer": { "@type": "Answer", "text": "Most small business websites we build fall between $400 and $1,000, depending on how many pages and features you need. A simple one-page site can come in under $400, while larger sites with more pages or custom features cost more. You'll get a clear quote up front, so you know the price before any work begins." } },
+    { "@type": "Question", "name": "Does my small business really need a website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most customers look a business up online before they call or stop by, and if they can't find you, they'll find a competitor instead. A website is the one place online you fully control: it shows your services, hours and contact details around the clock, helps you appear in Google searches, and makes your business look established in a way a social media page alone can't." } },
+    { "@type": "Question", "name": "Can you build a simple one-page website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A one-page website is often the perfect fit for a small business that's just getting started. It puts who you are, what you offer and how to reach you on a single clean, mobile-friendly page, and it's quick and affordable to launch. When your business grows, we can add more pages to it." } },
+    { "@type": "Question", "name": "Can you fix an existing website?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whether it's broken pages, an outdated design, slow loading or a site that doesn't work well on phones, we can repair it. All we need is the right access to your website, such as a login to your site's admin panel or hosting account." } },
+    { "@type": "Question", "name": "Do I need to buy a domain name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your domain name is your address on the web, like yourbusiness.com, and every website needs one. If you don't have one yet, we can help you pick a good name, register it and connect it to your new site. If you already own one, we'll simply use that." } },
+    { "@type": "Question", "name": "Can you work with my existing hosting company?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. There's no need to switch providers or move your site. We're happy to work with the hosting company you already have, so your accounts, email and billing stay exactly where they are while we handle the website itself." } },
+    { "@type": "Question", "name": "Do you provide website maintenance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer ongoing website maintenance on any hosting platform, covering content updates, fixes and routine upkeep so your site stays current, secure and working properly." } },
+    { "@type": "Question", "name": "Can you help my business show up on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this is one of our specialties. We build every site with search engine optimization (SEO) in mind and can improve an existing site too, focusing on the local searches your customers actually make, so people nearby can find you when they're looking for what you offer." } },
+    { "@type": "Question", "name": "Do you work with businesses throughout New Hampshire?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're based in Meredith and work with small businesses throughout New Hampshire and beyond. Everything can be handled remotely, so wherever you're located, you'll get the same personal, direct service." } }
   ]
 }
 </script>
@@ -281,6 +298,34 @@
   .service-card p { font-size: 0.96rem; flex-grow: 1; }
   .service-tag { font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--surface-2); border-radius: 20px; padding: 5px 12px; width: fit-content; }
 
+  /* faq */
+  .faq { background: var(--surface); border-top: 1px solid var(--line); }
+  .faq .section-head { margin: 0 auto; text-align: center; }
+  .faq-list { max-width: 760px; margin: 48px auto 0; border-top: 1px solid var(--line); }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    padding: 22px 4px; transition: color 0.2s ease;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary h3 { font-size: clamp(1.05rem, 1.5vw, 1.2rem); font-weight: 500; transition: color 0.2s ease; }
+  .faq-item summary:hover h3, .faq-item[open] summary h3 { color: var(--aqua); }
+  .faq-item summary:focus-visible { outline: 2px solid var(--aqua); outline-offset: 2px; border-radius: 4px; }
+  .faq-icon {
+    position: relative; flex: none; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--aqua-soft); color: var(--aqua); transition: transform 0.3s ease;
+  }
+  .faq-icon::before, .faq-icon::after {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.6px; background: currentColor;
+    transform: translate(-50%, -50%);
+  }
+  .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); transition: opacity 0.3s ease; }
+  .faq-item[open] .faq-icon { transform: rotate(180deg); }
+  .faq-item[open] .faq-icon::after { opacity: 0; }
+  .faq-answer { padding: 0 48px 24px 4px; }
+  .faq-answer a { color: var(--aqua); text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 560px) { .faq-answer { padding-right: 4px; } }
+
   /* work strip */
 
   /* contact */
@@ -335,7 +380,7 @@
     <div class="wrap navwrap">
       <a class="brand" href="#top" style="align-items:center;">
         <span class="brand-mark"><img src="assets/img/WWW_Logo.jpg" alt="Winni Webworks logo"></span>
-        <span class="brand-text">Winni Webworks<small>Lakes Region, NH</small></span>
+        <span class="brand-text">Winni Webworks<small>Meredith, NH</small></span>
       </a>
       <button class="navToggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -411,6 +456,80 @@
     </div>
   </section>
 
+  <section id="faq" class="faq section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to what New Hampshire small business owners ask us most.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary><h3>How much does a small business website cost?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Most small business websites we build fall between $400 and $1,000, depending on how many pages and features you need. A simple one-page site can come in under $400, while larger sites with more pages or custom features cost more. You'll get a clear quote up front, so you know the price before any work begins.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Does my small business really need a website?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. Most customers look a business up online before they call or stop by, and if they can't find you, they'll find a competitor instead. A website is the one place online you fully control: it shows your services, hours and contact details around the clock, helps you appear in Google searches, and makes your business look established in a way a social media page alone can't.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Can you build a simple one-page website?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. A one-page website is often the perfect fit for a small business that's just getting started. It puts who you are, what you offer and how to reach you on a single clean, mobile-friendly page, and it's quick and affordable to launch. When your business grows, we can add more pages to it.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Can you fix an existing website?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. Whether it's broken pages, an outdated design, slow loading or a site that doesn't work well on phones, we can repair it. All we need is the right access to your website, such as a login to your site's admin panel or hosting account. <a href="WebRepairForm.html">Tell us what's going wrong</a> and we'll take a look.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Do I need to buy a domain name?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. Your domain name is your address on the web, like yourbusiness.com, and every website needs one. If you don't have one yet, we can help you pick a good name, register it and connect it to your new site. If you already own one, we'll simply use that.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Can you work with my existing hosting company?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. There's no need to switch providers or move your site. We're happy to work with the hosting company you already have, so your accounts, email and billing stay exactly where they are while we handle the website itself.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Do you provide website maintenance?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. We offer ongoing website maintenance on any hosting platform, covering content updates, fixes and routine upkeep so your site stays current, secure and working properly. <a href="WebMaintainForm.html">Ask about a maintenance plan</a> that fits your business.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Can you help my business show up on Google?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes, this is one of our specialties. We build every site with search engine optimization (SEO) in mind and can improve an existing site too, focusing on the local searches your customers actually make, so people nearby can find you when they're looking for what you offer.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><h3>Do you work with businesses throughout New Hampshire?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-answer">
+            <p>Yes. We're based in Meredith and work with small businesses throughout New Hampshire and beyond. Everything can be handled remotely, so wherever you're located, you'll get the same personal, direct service.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="contact section-pad">
     <div class="wrap">
       <div class="section-head reveal">
@@ -450,7 +569,7 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <span class="copyright">&copy; Winni Webworks 2026 &mdash; Web Design, SEO &amp; Website Support in Meredith, NH. Serving the Lakes Region of New Hampshire.</span>
+      <span class="copyright">&copy; Winni Webworks 2026 &mdash; Web Design, SEO &amp; Website Support in Meredith, NH. Serving small businesses throughout New Hampshire.</span>
       <ul class="social-buttons">
         <li><a href="https://share.google/823uvBk97Z3JibrHM" aria-label="Google"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81Z"/></svg></a></li>
         <li><a href="https://www.facebook.com/profile.php?id=61588019742144&amp;rdid=fdAYL4mshR6fErhC&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17eQ1FA31u%2F#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.17 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.77 8.44-4.94 8.44-9.94Z"/></svg></a></li>
