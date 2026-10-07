@@ -79,6 +79,8 @@
     --bg: #e7f2f4;
     --surface: #ffffff;
     --surface-2: #d8e9ec;
+    --faq-bg: #ffffff;
+    --faq-line: #d6e5e9;
     --ink: #0b1f33;
     --ink-soft: #4c6474;
     --line: #d6e5e9;
@@ -98,6 +100,8 @@
       --bg: #06101c;
       --surface: #163254;
       --surface-2: #1c3d63;
+      --faq-bg: #214a76;
+      --faq-line: #3a6492;
       --ink: #e9f3f6;
       --ink-soft: #a3bcc9;
       --line: #2a4d70;
@@ -115,6 +119,8 @@
     --bg: #06101c;
     --surface: #163254;
     --surface-2: #1c3d63;
+    --faq-bg: #214a76;
+    --faq-line: #3a6492;
     --ink: #e9f3f6;
     --ink-soft: #a3bcc9;
     --line: #2a4d70;
@@ -299,10 +305,10 @@
   .service-tag { font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--surface-2); border-radius: 20px; padding: 5px 12px; width: fit-content; }
 
   /* faq */
-  .faq { background: var(--surface); border-top: 1px solid var(--line); }
+  .faq { background: var(--faq-bg); border-top: 1px solid var(--faq-line); }
   .faq .section-head { margin: 0 auto; text-align: center; }
-  .faq-list { max-width: 760px; margin: 48px auto 0; border-top: 1px solid var(--line); }
-  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-list { max-width: 760px; margin: 48px auto 0; border-top: 1px solid var(--faq-line); }
+  .faq-item { border-bottom: 1px solid var(--faq-line); }
   .faq-item summary {
     list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px;
     padding: 22px 4px; transition: color 0.2s ease;
