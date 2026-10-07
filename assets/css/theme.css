@@ -247,3 +247,15 @@ footer .quicklinks a:hover { color: var(--aqua) !important; }
 [style*="096d81"] { background: var(--navy) !important; }
 [style*="254, 209, 54"], [style*="254,209,54"] { background: var(--aqua) !important; color: #fff !important; }
 [style*="255, 246, 215"], [style*="255,246,215"] { background: var(--bs-body-bg) !important; }
+
+/* ---- Small-screen fixes ---- */
+/* Long placeholder questions in the form dropdowns were cut off on phones and tablets; let them wrap. */
+.form-select { white-space: normal; height: auto; }
+/* The first About heading overflowed its column on narrow phones. */
+@media (max-width: 400px) {
+  #about h2.display-1 { font-size: 33px; }
+}
+/* Long words in the form page headings overflowed on the narrowest phones. */
+@media (max-width: 350px) {
+  h2.section-heading { font-size: 30px !important; }
+}

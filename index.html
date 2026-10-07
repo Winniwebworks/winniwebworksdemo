@@ -287,8 +287,8 @@
   }
 
   /* services */
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 56px; }
-  @media (max-width: 860px) { .services-grid { grid-template-columns: 1fr; } }
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-top: 56px; }
+  @media (max-width: 700px) { .services-grid { grid-template-columns: 1fr; } }
   .service-card {
     background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
     padding: 36px 30px; display: flex; flex-direction: column; gap: 18px;
@@ -397,6 +397,7 @@
           <div class="navdrop-menu">
             <a href="WebDesign.html">Web Design</a>
             <a href="Socials.html">Social Media</a>
+            <a href="SEO.html">SEO</a>
           </div>
         </div>
         <a href="Portfolio.html">Portfolio</a>
@@ -450,6 +451,16 @@
         </div>
 
         <div class="service-card reveal" style="transition-delay:0.16s;">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16 L21 21"/></svg>
+          </div>
+          <span class="service-num">03 / Get Found</span>
+          <h4>Search Engine Optimization</h4>
+          <p>Search engine optimization (SEO) helps Google understand and recommend your website, so customers find you when they search.</p>
+          <a class="btn btn-ghost" href="SEO.html">Learn More</a>
+        </div>
+
+        <div class="service-card reveal" style="transition-delay:0.24s;">
           <div class="service-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="4" height="10"/><rect x="10" y="5" width="4" height="15"/><rect x="17" y="13" width="4" height="7"/></svg>
           </div>
